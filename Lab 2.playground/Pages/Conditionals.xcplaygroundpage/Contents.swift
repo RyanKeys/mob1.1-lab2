@@ -15,7 +15,16 @@ If the reply is "Good" print Great!
 Otherwise, if you said "Bad", print Oh no!
 In all other cases, I reply "I see..."
 */
+if(mood == "Good") {
+    print("Great")
+}
 
+if(mood == "Bad") {
+    print("Oh No!")
+}
+else {
+    print("I see...")
+}
 
 /*:
 ### Combining Conditionals
@@ -38,6 +47,9 @@ If the time  > 7 and mood is Good then print Great!
 */
 var time : Int = 0
 
+if(mood == "Good" && time > 7) {
+    print("Great!")
+}
 
 
 /*:
@@ -64,7 +76,9 @@ if pet == "bunny" || pet == "puppy" {
 
  Test your work by setting the values for mood and time to different values.
 */
-
+if(mood == "Good" || time > 17) {
+    print("Great!")
+}
 
 /*:
 ### Conditionals and Functions
@@ -87,7 +101,14 @@ if pet == "bunny" || pet == "puppy" {
 */
 
 
-
+func stringToEmoji(word: String) -> Character {
+    if(word == "happy") {
+        return "😀"
+    }
+    else {
+        return "🤔"
+    }
+}
 /*:
 The emoji thing went over big with the founders. They want more! People use lots of emojis, this could be big.
 
@@ -102,11 +123,85 @@ otherwise -> "🤔"
 ```
 Test your work by calling the function four times with four different words and print the response. Make sure the response shows each of the four possible emojis.
 */
+func textToEmoji(text:String) -> Character {
+    if(text == "happy") {
+        return "😀"
+    }
+    if(text == "laughing") {
+        return "😆"
+    }
+    
+    if(text == "cool") {
+        return "😎"
+    }
+    
+    else {
+        return "🤔"
+    }
+}
 
+print(textToEmoji(text: "happy"))
+print(textToEmoji(text: "laughing"))
+print(textToEmoji(text: "cool"))
+print(textToEmoji(text: "ree"))
+/*:
+That emoji function was really good. Everyone is thinks this app will be huge!
 
+But there are a few details that need some work. While the emojis are good, you want to show happy face emoji if the word is good, okay, awesome, lit, or fun.
+ ```
+ happy, good, okay, awesome, lit, fun  -> "😀"
+ laughing -> "😆"
+ cool -> "😎"
+ otherwise -> "🤔"
+ ```
+ Write a function in that takes in a word: String and returns a Character. The body of the function should compare the word to the strings above and return the character emoji that matches.
 
+ Test your work for all possible words.
+*/
+func textToEmojis(text:String) -> Character {
+    if(text == "happy" || text == "good" || text == "okay" || text == "awesome" || text == "lit" || text == "fun") {
+        return "😀"
+    }
+    if(text == "laughing") {
+        return "😆"
+    }
+    
+    if(text == "cool") {
+        return "😎"
+    }
+    
+    else {
+        return "🤔"
+    }
+}
 
+print(textToEmojis(text: "happy"))
+print(textToEmojis(text: "good"))
+print(textToEmojis(text: "okay"))
+print(textToEmojis(text: "awesome"))
+print(textToEmojis(text: "lit"))
+print(textToEmojis(text: "fun"))
+print(textToEmojis(text: "laughing"))
+print(textToEmojis(text: "cool"))
+print(textToEmojis(text: "ree"))
+/*:
+That emoji function was really good. Everyone is thinks this app will be huge!
 
+But there are a few details that need some work. While the emojis are good, you want to show happy face emoji if the word is good, okay, awesome, lit, or fun.
+ ```
+ happy, good, okay, awesome, lit, fun  -> "😀"
+ laughing -> "😆"
+ cool -> "😎"
+ otherwise -> "🤔"
+ ```
+ Write a function in that takes in a word: String and returns a Character. The body of the function should compare the word to the strings above and return the character emoji that matches.
+
+ Test your work for all possible words.
+*/
+
+print(textToEmoji(text: "laughing"))
+print(textToEmoji(text: "cool"))
+print(textToEmoji(text: "ree"))
 /*:
 That emoji function was really good. Everyone is thinks this app will be huge!
 
@@ -123,6 +218,77 @@ But there are a few details that need some work. While the emojis are good, you 
 */
 
 
+print(textToEmoji(text: "laughing"))
+print(textToEmoji(text: "cool"))
+print(textToEmoji(text: "ree"))
+/*:
+That emoji function was really good. Everyone is thinks this app will be huge!
+
+But there are a few details that need some work. While the emojis are good, you want to show happy face emoji if the word is good, okay, awesome, lit, or fun.
+ ```
+ happy, good, okay, awesome, lit, fun  -> "😀"
+ laughing -> "😆"
+ cool -> "😎"
+ otherwise -> "🤔"
+ ```
+ Write a function in that takes in a word: String and returns a Character. The body of the function should compare the word to the strings above and return the character emoji that matches.
+
+ Test your work for all possible words.
+*/
+
+print(textToEmoji(text: "laughing"))
+print(textToEmoji(text: "cool"))
+print(textToEmoji(text: "ree"))
+/*:
+That emoji function was really good. Everyone is thinks this app will be huge!
+
+But there are a few details that need some work. While the emojis are good, you want to show happy face emoji if the word is good, okay, awesome, lit, or fun.
+ ```
+ happy, good, okay, awesome, lit, fun  -> "😀"
+ laughing -> "😆"
+ cool -> "😎"
+ otherwise -> "🤔"
+ ```
+ Write a function in that takes in a word: String and returns a Character. The body of the function should compare the word to the strings above and return the character emoji that matches.
+
+ Test your work for all possible words.
+*/
+
+print(textToEmoji(text: "laughing"))
+print(textToEmoji(text: "cool"))
+print(textToEmoji(text: "ree"))
+/*:
+That emoji function was really good. Everyone is thinks this app will be huge!
+
+But there are a few details that need some work. While the emojis are good, you want to show happy face emoji if the word is good, okay, awesome, lit, or fun.
+ ```
+ happy, good, okay, awesome, lit, fun  -> "😀"
+ laughing -> "😆"
+ cool -> "😎"
+ otherwise -> "🤔"
+ ```
+ Write a function in that takes in a word: String and returns a Character. The body of the function should compare the word to the strings above and return the character emoji that matches.
+
+ Test your work for all possible words.
+*/
+
+print(textToEmojis(text: "laughing"))
+print(textToEmojis(text: "cool"))
+print(textToEmojis(text: "ree"))
+/*:
+That emoji function was really good. Everyone is thinks this app will be huge!
+
+But there are a few details that need some work. While the emojis are good, you want to show happy face emoji if the word is good, okay, awesome, lit, or fun.
+ ```
+ happy, good, okay, awesome, lit, fun  -> "😀"
+ laughing -> "😆"
+ cool -> "😎"
+ otherwise -> "🤔"
+ ```
+ Write a function in that takes in a word: String and returns a Character. The body of the function should compare the word to the strings above and return the character emoji that matches.
+
+ Test your work for all possible words.
+*/
 
 
  
